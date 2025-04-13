@@ -20,9 +20,10 @@ const Skills = () => {
 
   const frameworks = [
     { name: "Material Design", level: 85 },
-    { name: "Google Fit API", level: 75 },
-    { name: "Google Sign-In", level: 80 },
-    { name: "Gemini API", level: 60 },
+    { name: "Room Database", level: 75 },
+    { name: "Firebase Authentication", level: 80 },
+    { name: "Google Sign-In", level: 75 },
+    { name: "Google Fit API", level: 70 },
   ];
 
   return (
@@ -31,7 +32,7 @@ const Skills = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <SkillCategory title="Languages" skills={languages} />
         <SkillCategory title="Tools & Platforms" skills={tools} />
-        <SkillCategory title="APIs & Frameworks" skills={frameworks} />
+        <SkillCategory title="Libraries & Frameworks" skills={frameworks} />
       </div>
     </section>
   );

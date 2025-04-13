@@ -11,7 +11,7 @@ const Projects = () => {
       description: "An intelligent mobile app designed to assist users with mental health tracking and personalized support.",
       image: "/placeholder.svg",
       badges: ["Kotlin", "Android Studio", "Google Fit API", "RoomDB", "Google Sign-In"],
-      github: "#",
+      github: "https://github.com/anmoltrvd01/mental-health-assistant",
       live: "#",
       features: [
         "Clean dashboard UI showing health metrics like steps, sleep, calories",
@@ -26,7 +26,7 @@ const Projects = () => {
       description: "A working clone of the popular Blinkit grocery delivery application with authentication and database integration.",
       image: "/placeholder.svg",
       badges: ["Kotlin", "Firebase", "XML", "Authentication"],
-      github: "#",
+      github: "https://github.com/anmoltrvd01/blinkit-clone",
       live: "#",
       features: [
         "Splash screen with smooth animations",
@@ -84,10 +84,20 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
       </CardContent>
       
       <CardFooter className="flex flex-wrap gap-3 pt-2">
-        <Button variant="outline" size="sm" className="gap-1">
+        <Button 
+          variant="outline" 
+          size="sm" 
+          className="gap-1"
+          onClick={() => window.open(project.github, '_blank')}
+        >
           <Github size={16} className="mr-1" /> Repository
         </Button>
-        <Button variant="default" size="sm" className="gap-1 bg-android-green hover:bg-android-green/90">
+        <Button 
+          variant="default" 
+          size="sm" 
+          className="gap-1 bg-android-green hover:bg-android-green/90"
+          onClick={() => window.open(project.live, '_blank')}
+        >
           <ExternalLink size={16} className="mr-1" /> View Project
         </Button>
       </CardFooter>
