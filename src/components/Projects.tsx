@@ -3,13 +3,14 @@ import { ExternalLink, Github, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Projects = () => {
   const projects = [
     {
       title: "Mental Health AI Assistant",
       description: "An intelligent mobile app designed to assist users with mental health tracking and personalized support.",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=600&h=300",
       badges: ["Kotlin", "Android Studio", "Google Fit API", "RoomDB", "Google Sign-In", "Material Design"],
       github: "https://github.com/anmoltrvd01/MentalHealthAiAssistant.git",
       live: "#",
@@ -25,7 +26,7 @@ const Projects = () => {
     {
       title: "Blinkit Clone",
       description: "A working clone of the popular Blinkit grocery delivery application with authentication and database integration.",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&h=300",
       badges: ["Kotlin", "Firebase", "XML", "Authentication", "Material Design"],
       github: "https://github.com/anmoltrvd01/BlinkitCloneUser.git",
       live: "#",
@@ -55,10 +56,15 @@ const Projects = () => {
 const ProjectCard = ({ project, index }: { project: any; index: number }) => {
   return (
     <Card className="flex flex-col reveal android-card h-full material-card" style={{ animationDelay: `${index * 200}ms` }}>
-      <div className="relative h-48 bg-muted overflow-hidden rounded-t-lg">
-        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-android-green/20 to-android-navy/30">
-          <Smartphone className="h-20 w-20 text-android-green opacity-50" />
-        </div>
+      <div className="overflow-hidden rounded-t-lg bg-gradient-to-br from-android-green/10 to-android-navy/20">
+        <AspectRatio ratio={2/1} className="bg-muted">
+          <img 
+            src={project.image} 
+            alt={project.title}
+            className="object-cover w-full h-full transition-transform hover:scale-105 duration-300"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-50"></div>
+        </AspectRatio>
       </div>
       
       <CardHeader className="material-card-header">
