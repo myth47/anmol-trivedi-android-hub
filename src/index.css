@@ -5,64 +5,64 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 10%;
 
     --primary: 142.1 70.6% 45.3%; /* Android Green */
-    --primary-foreground: 210 40% 98%;
+    --primary-foreground: 0 0% 98%;
 
     --secondary: 201 100% 12.9%; /* Android Navy */
-    --secondary-foreground: 210 40% 98%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 142.1 70.6% 95.3%;
+    --accent-foreground: 142.1 70.6% 35.3%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
     --ring: 142.1 70.6% 45.3%;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 10%;
+    --foreground: 0 0% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 15%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 15%;
+    --popover-foreground: 0 0% 98%;
 
     --primary: 142.1 70.6% 45.3%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary-foreground: 0 0% 10%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 142.1 10% 20%;
+    --accent-foreground: 142.1 70.6% 45.3%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
     --ring: 142.1 70.6% 45.3%;
   }
 }
@@ -75,6 +75,7 @@
   body {
     @apply bg-background text-foreground scroll-smooth;
     font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: 'Roboto', sans-serif;
   }
   
   .section {
@@ -91,7 +92,8 @@
   }
   
   .android-card {
-    @apply bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden border-l-4 border-android-green transition-all duration-300 hover:shadow-xl;
+    @apply bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden border-0 transition-all duration-300;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   }
   
   .reveal {
@@ -100,5 +102,51 @@
   
   .reveal.active {
     @apply animate-fade-in;
+  }
+
+  /* Material Design specific styles */
+  .material-card {
+    @apply rounded-lg shadow-md hover:shadow-xl transition-all;
+  }
+
+  .material-card-header {
+    @apply pb-2;
+  }
+
+  .material-button {
+    @apply shadow-sm transition-all duration-200 hover:shadow-md;
+    letter-spacing: 0.01em;
+  }
+
+  .material-button-outline {
+    @apply border-android-green text-android-green hover:bg-android-green/5;
+  }
+
+  .material-list-item {
+    @apply pb-1;
+    position: relative;
+  }
+
+  /* Material ripple effect (simplified) */
+  .material-button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .3s, opacity .5s;
+  }
+
+  .material-button:active::after {
+    transform: scale(0, 0);
+    opacity: .3;
+    transition: 0s;
   }
 }
