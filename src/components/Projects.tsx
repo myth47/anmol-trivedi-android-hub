@@ -61,11 +61,9 @@ const Projects = () => {
   );
 };
 
-// --- Updated ProjectCard component ---
 const ProjectCard = ({ project, index }: { project: any; index: number }) => {
   return (
     <Card className="flex flex-col reveal android-card h-full material-card relative" style={{ animationDelay: `${index * 200}ms` }}>
-      {/* Mini material design logo on top */}
       <div className="flex flex-col items-center relative">
         <div className="w-full h-24 relative z-10 rounded-t-lg overflow-hidden">
           <img
@@ -76,7 +74,6 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
         </div>
-        {/* Overlapping logo */}
         <div className="absolute left-1/2 -translate-x-1/2 -bottom-8 z-20">
           <ProjectLogo projectKey={project.logo} />
         </div>
