@@ -1,35 +1,53 @@
 
 import React from "react";
-import { Separator } from "@/components/ui/separator";
 
 const ResumeProjects = () => (
-  <div className="mb-6">
-    <h2 className="text-lg font-semibold border-b border-gray-300 pb-1 mb-2 uppercase tracking-wide text-gray-800">Projects</h2>
+  <div className="mb-5">
+    <h2 className="text-primaryBlue text-lg font-semibold border-b border-primaryBlue pb-1 mb-3 uppercase tracking-wide">Projects</h2>
     
-    <div className="mb-4">
+    <div className="mb-5">
       <div className="flex justify-between items-baseline">
         <h3 className="text-base font-semibold">Mental Health AI Assistant</h3>
-        <a href="https://github.com/anmoltrvd01/MentalHealthAiAssistant.git" target="_blank" rel="noopener noreferrer" className="text-sm text-purple-600">GitHub</a>
+        <div className="text-sm italic">
+          <a href="https://github.com/anmoltrvd01/MentalHealthAiAssistant.git" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             className="text-linkBlue hover:underline">
+            GitHub
+          </a> | Jan - Apr 2024
+        </div>
       </div>
-      <p className="italic text-gray-700 text-sm mb-1">Kotlin, Android Studio, Google Fit API, RoomDB, Google Sign-In</p>
-      <ul className="list-disc pl-5 space-y-1 text-sm">
-        <li>Mobile app for mental health tracking and AI support.</li>
-        <li>Dashboard for health metrics (steps, sleep, calories).</li>
-        <li>Google Fit and RoomDB integration.</li>
-        <li>Google Sign-In for authentication.</li>
+      
+      <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
+        <li>Developed a comprehensive mobile application for mental health tracking with an AI-powered chat assistant to provide personalized support and coping strategies</li>
+        <li>Designed and implemented a clean, intuitive dashboard displaying key health metrics including steps, sleep quality, hydration, and mood patterns</li>
+        <li>Integrated Google Fit API to automatically track physical activities and correlate them with mental wellbeing</li>
+        <li>Implemented secure local storage using RoomDB for sensitive user health data with encryption</li>
+        <li>Added Google Sign-In for seamless authentication while maintaining strict user privacy protocols</li>
+        <li><span className="font-semibold">Tech Stack:</span> Kotlin, Android Studio, MVVM Architecture, Google Fit API, RoomDB, Firebase ML Kit</li>
       </ul>
     </div>
     
     <div>
       <div className="flex justify-between items-baseline">
-        <h3 className="text-base font-semibold">Blinkit Clone</h3>
-        <a href="https://github.com/anmoltrvd01/BlinkitCloneUser.git" target="_blank" rel="noopener noreferrer" className="text-sm text-purple-600">GitHub</a>
+        <h3 className="text-base font-semibold">Blinkit Clone - Quick Delivery App</h3>
+        <div className="text-sm italic">
+          <a href="https://github.com/anmoltrvd01/BlinkitCloneUser.git" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             className="text-linkBlue hover:underline">
+            GitHub
+          </a> | Aug - Dec 2023
+        </div>
       </div>
-      <p className="italic text-gray-700 text-sm mb-1">Kotlin, Firebase Realtime Database, XML</p>
-      <ul className="list-disc pl-5 space-y-1 text-sm">
-        <li>Grocery app clone with splash screen, OTP, and auth.</li>
-        <li>SignIn/OTP fragments and Firebase Auth.</li>
-        <li>Realtime Database integration in progress.</li>
+      
+      <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
+        <li>Built a fully functional e-commerce application inspired by Blinkit with features including product browsing, cart management, and order tracking</li>
+        <li>Created a polished UI with smooth animations for splash screen, product transitions, and checkout flow</li>
+        <li>Implemented secure user authentication with phone number verification and OTP validation using Firebase</li>
+        <li>Developed custom RecyclerView adapters for efficient product category and listing displays</li>
+        <li>Currently implementing Firebase Realtime Database for product information and user order history</li>
+        <li><span className="font-semibold">Tech Stack:</span> Kotlin, Firebase Authentication, RecyclerView, Material Design Components, MVVM Architecture</li>
       </ul>
     </div>
   </div>

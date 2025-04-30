@@ -1,16 +1,23 @@
 
 import React from "react";
-import { Separator } from "@/components/ui/separator";
 
 const ResumeEducation = () => (
-  <div className="mb-6">
-    <h2 className="text-lg font-semibold border-b border-gray-300 pb-1 mb-2 uppercase tracking-wide text-gray-800">Education</h2>
-    <div className="flex justify-between items-baseline">
-      <div>
-        <h3 className="text-base font-semibold mb-0">B.Tech in Computer Science & Business System</h3>
-        <p className="text-sm">School of Information Technology, UTD, RGPV, Bhopal</p>
+  <div className="mb-5">
+    <h2 className="text-primaryBlue text-lg font-semibold border-b border-primaryBlue pb-1 mb-3 uppercase tracking-wide">Education</h2>
+    
+    <div>
+      <div className="flex justify-between items-start">
+        <div>
+          <h3 className="text-base font-semibold">School of Information Technology, UTD, RGPV, Bhopal</h3>
+          <p className="text-sm italic">Bachelor of Technology in Computer Science and Business System</p>
+        </div>
+        <p className="italic text-sm text-gray-600 text-right">Expected Graduation: 2026</p>
       </div>
-      <p className="italic text-sm text-gray-600">Expected Graduation: 2026</p>
+      
+      <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
+        <li>Relevant Coursework: Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems</li>
+        <li>CGPA: 6.43</li>
+      </ul>
     </div>
   </div>
 );
