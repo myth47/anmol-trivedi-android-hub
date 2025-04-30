@@ -6,21 +6,21 @@ const Skills = () => {
     { name: "Kotlin", level: "Advanced" },
     { name: "Java", level: "Advanced" },
     { name: "XML", level: "Advanced" },
-    { name: "C++", level: "Intermediate" },
+    { name: "C++", level: "Beginner" },
   ];
 
   const tools = [
     { name: "Android Studio", level: "Advanced" },
     { name: "Firebase", level: "Intermediate" },
     { name: "Git/GitHub", level: "Advanced" },
-    { name: "RoomDB", level: "Intermediate" },
+    { name: "RoomDB", level: "Beginner" },
   ];
 
   const frameworks = [
     { name: "Material Design", level: "Advanced" },
-    { name: "Room Database", level: "Intermediate" },
+    { name: "Room Database", level: "Beginner" },
     { name: "Firebase Authentication", level: "Advanced" },
-    { name: "Google Sign-In", level: "Intermediate" },
+    { name: "Google Sign-In", level: "Beginner" },
     { name: "Google Fit API", level: "Beginner" },
   ];
 
