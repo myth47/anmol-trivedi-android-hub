@@ -3,23 +3,23 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const Skills = () => {
   const languages = [
-    { name: "Kotlin", level: "Advanced" },
-    { name: "Java", level: "Advanced" },
-    { name: "XML", level: "Advanced" },
+    { name: "Kotlin", level: "Intermediate" },
+    { name: "Java", level: "Intermediate" },
+    { name: "XML", level: "Intermediate" },
     { name: "C++", level: "Beginner" },
   ];
 
   const tools = [
-    { name: "Android Studio", level: "Advanced" },
+    { name: "Android Studio", level: "Intermediate" },
     { name: "Firebase", level: "Intermediate" },
-    { name: "Git/GitHub", level: "Advanced" },
+    { name: "Git/GitHub", level: "Intermediate" },
     { name: "RoomDB", level: "Beginner" },
   ];
 
   const frameworks = [
-    { name: "Material Design", level: "Advanced" },
+    { name: "Material Design", level: "Intermediate" },
     { name: "Room Database", level: "Beginner" },
-    { name: "Firebase Authentication", level: "Advanced" },
+    { name: "Firebase Authentication", level: "Intermediate" },
     { name: "Google Sign-In", level: "Beginner" },
     { name: "Google Fit API", level: "Beginner" },
   ];
